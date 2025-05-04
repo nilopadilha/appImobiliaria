@@ -6,13 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "tb_usuario")
-public class Usuario {
+public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,4 +39,7 @@ public class Usuario {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Perfil", nullable = false) // FK obrigatória
     private Perfil perfil;
+
+    public Usuario(String nome, String login, Funcionario funcionario, Perfil perfil) {
+    }
 }

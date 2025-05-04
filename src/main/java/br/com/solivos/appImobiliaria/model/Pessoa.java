@@ -1,11 +1,13 @@
 package br.com.solivos.appImobiliaria.model;
 
-import br.com.solivos.appImobiliaria.enumerat.TipoPessoa;
+import br.com.solivos.appImobiliaria.enumerate.TipoPessoa;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Set;
 
 @Entity
 @Getter
@@ -52,11 +54,10 @@ public class Pessoa {
     @JoinColumn(name = "Bairro") // FK opcional pela cardinalidade 0..*
     private Bairro bairro;
 
-    // Relações inversas (Pessoa pode ser Cliente ou Funcionario)
-    // Não mapeadas diretamente aqui, mas nos respectivos Cliente/Funcionario
-    // @OneToOne(mappedBy = "pessoa", fetch = FetchType.LAZY)
-    // private Cliente cliente;
+    // Relationships where Pessoa is referenced
+    @OneToOne(mappedBy = "pessoa", fetch = FetchType.LAZY)
+    private Funcionario funcionario;
 
-    // @OneToOne(mappedBy = "pessoa", fetch = FetchType.LAZY)
-    // private Funcionario funcionario
+    @OneToMany(mappedBy = "pessoa", fetch = FetchType.LAZY)
+    private Set<Cliente> clientes;
 }

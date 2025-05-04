@@ -1,6 +1,6 @@
 package br.com.solivos.appImobiliaria.model;
 
-import br.com.solivos.appImobiliaria.enumerat.StatusImovel;
+import br.com.solivos.appImobiliaria.enumerate.StatusImovel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

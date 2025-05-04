@@ -1,4 +1,4 @@
-package br.com.solivos.appImobiliaria.enumerat;
+package br.com.solivos.appImobiliaria.enumerate;
 
 public enum StatusImovel {
     ATIVO, INATIVO, VENDIDO, ALUGADO

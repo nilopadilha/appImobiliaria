@@ -1,7 +1,7 @@
 package br.com.solivos.appImobiliaria.model;
 
-import br.com.solivos.appImobiliaria.enumerat.StatusNegociacao;
-import br.com.solivos.appImobiliaria.enumerat.TipoNegocio;
+import br.com.solivos.appImobiliaria.enumerate.StatusNegociacao;
+import br.com.solivos.appImobiliaria.enumerate.TipoNegocio;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
