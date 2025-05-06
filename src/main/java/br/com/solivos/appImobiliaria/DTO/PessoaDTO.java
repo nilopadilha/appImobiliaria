@@ -7,10 +7,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @Builder
-public class PessoaDTO {
+public class PessoaDTO implements Serializable {
     private Long id;
     private String nome;
     private String apelido;
