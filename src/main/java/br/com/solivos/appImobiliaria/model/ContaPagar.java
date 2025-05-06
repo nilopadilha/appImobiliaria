@@ -19,6 +19,7 @@ import java.time.LocalDate;
 public class ContaPagar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
     @Enumerated(EnumType.STRING)

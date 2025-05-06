@@ -19,6 +19,7 @@ import java.util.List;
 public class Imovel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
     @Column(precision = 2, scale = 0) // Numeric(2)

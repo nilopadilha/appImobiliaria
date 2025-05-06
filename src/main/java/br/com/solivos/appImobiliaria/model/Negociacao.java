@@ -21,6 +21,7 @@ import java.util.List;
 public class Negociacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
     private LocalDate data; // Data da negociação (ou início)
